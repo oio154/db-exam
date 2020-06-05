@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Egzamin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+            <h1 class="display-1">Egzamin Bazy Danych</h1>
+            <h2 class="display-2">2020-06-06</h2>
+    </header>
+    
+    <div class="alert alert-warning" role="alert">
+        Na adres email (lub inny kontakt), podany w szkole, otrzymałeś czteroliterowy identyfikator egzaminacyjny. Identyfikator ten oznaczony jest w egzaminie jako XXXX.
+        Zamiast XXXX podajesz zawsze swój identyfikator. 
+    </div>
+
+    <div class="alert alert-warning" role="alert">
+        Rozwiązanie zadań egzaminacynych następuje w bazie danych, do której otrzymujesz dostęp na czas egzaminu.
+    </div>
+
+    <!--
+create database XXTA;
+create user 'XXTA'@'%' identified by 'XXTA';
+grant all privileges on XXTA.* to 'XXTA'@'%' with grant option;
+flush privileges;
+
+
+
+    -->
+
+
+ 
+    
+    <div class="card">
+        <div class="card-header">
+          Podłączenie do bazy danych.
+        </div>
+        <div class="card-body">
+          Podłącz się do bazy danych używając następujących danych<br>
+          <b>Host:</b> s.web.katowice.pl<br>
+          <b>User:</b> XXXX<br>
+          <b>Password:</b> XXXX<br>
+        </div>
+      </div>
+
+
+
+
+      <div class="card">
+        <div class="card-header">
+          Zadanie 1.
+        </div>
+        <div class="card-body">
+          Utwórz tabelę <b>t1</b>
+          <table class="table table-bordered">
+              <tr>
+                  <td>id</td>
+                  <td>a</td>
+                  <td>b</td>
+                  <td>c</td>
+                  <td>d</td>
+              </tr>
+              <tr>
+                  <td>int, primary key, auto increment</td>
+                  <td>int</td>
+                  <td>int</td>
+                  <td>int</td>
+                  <td>int</td>
+              </tr>
+
+          </table>
+        </div>
+      </div>
+
+
+
+
+
+
+      <div class="card">
+        <div class="card-header">
+          Zadanie 2.
+        </div>
+        <div class="card-body">
+          Utwórz tabelę <b>t2</b>
+          <table class="table table-bordered">
+              <tr>
+                  <td>id</td>
+                  <td>t1_id</td>
+                  <td>li</td>
+              </tr>
+              <tr>
+                  <td>int, primary key, auto increment</td>
+                  <td>int</td>
+                  <td>int</td>
+              </tr>
+
+          </table>
+        </div>
+      </div>
+
+
+
+
+      <div class="card">
+        <div class="card-header">
+          Zadanie 3.
+        </div>
+        <div class="card-body">
+            Utwórz relację pomiędzy utworzonymi tabelami. Kluczem obcym w tabeli t2 jest pole t1_id w relacji do t1.id. Na podstawie informacji o właściwościach poszczególnych
+            pól w tabelach ustal jakiego typu będzie to relacja: 1:1, 1:n czy n:n
+        </div>
+      </div>
+
+
+
+
+
+
+
+      <div class="card">
+        <div class="card-header">
+          Zadanie 4.
+        </div>
+        <div class="card-body">
+            Do tabeli t1 wprowadź 2 dowolne rekordy, do tabeli t2 wprowadź 5 dowolnych rekordów. Pamiętaj o utworzonych relacjach!
+        </div>
+      </div>
+
+
+
+
+
+
+      <div class="card">
+        <div class="card-header">
+          Zadanie 5.
+        </div>
+        <div class="card-body">
+            Utwórz widok sr1 zawierający średnią wartość pól a,b,c z tabeli t1;
+        </div>
+      </div>
+
+
+
+      <div class="card">
+        <div class="card-header">
+          Zadanie 6.
+        </div>
+        <div class="card-body">
+            Utwórz raport (w formie widoku o nazwie sr2) zawierający ilość rekordów t2 przypadających na każdy rekord t1. 
+        </div>
+      </div>
+
+
+
+
+
+
+
+      <h1 class="display-1">Egzamin Administrowanie Bazami Danych</h1>
+            <h2 class="display-2">2020-06-06</h2>
+
+
+
+            <div class="card">
+                <div class="card-header">
+                  Podłączenie do bazy danych.
+                </div>
+                <div class="card-body">
+                  Podłącz się do bazy danych używając następujących danych<br>
+                  <b>Host:</b> s.web.katowice.pl<br>
+                  <b>User:</b> XXXX<br>
+                  <b>Password:</b> XXXX<br>
+                </div>
+              </div>
+
+            <div class="card">
+                <div class="card-header">
+                  Zadanie 1.
+                </div>
+                <div class="card-body">
+                    W bazie danych utwórz procedurę zwracającą sumę 3 liczb całkowitych.
+                </div>
+              </div>
+
+
+              <div class="card">
+                <div class="card-header">
+                  Zadanie 2.
+                </div>
+                <div class="card-body">
+                    Utwórz tabelę <b>podpis</b> z polami <b>imie, nazwisko, data, haslo</b><br>
+                    W tabeli zapiszesz jeden rekord zawierający Twoje imię, nazwisko, dzisiejszą datę, a w polu hasło zapiszesz wynik funkcji
+                    PASSWORD() dla złączonych treści z 3 poprzednich pól. Samodzielnie dokonaj wyboru typu pól tabeli.
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header">
+                  Zadanie 3.
+                </div>
+                <div class="card-body">
+                   Utwórz tabelę zad3 i zapisz w niej rozmiar (w dowolnie przez siebie przyjętej jednosce pomiarowej) wszystkich tabel w bazie danych XXXX.
+                </div>
+              </div>
+
+
+              <div class="card">
+                <div class="card-header">
+                  Zadanie 4.
+                </div>
+                <div class="card-body">
+                   Dokonaj eksportu bazy danych XXXX. Pamiętaj o tym, że baza danych zawiera wodoki oraz funkcje, one również mają być wyeksportowane.
+                   Plik eksportu prześlij na adres zadanie400@web.katowice.pl
+                </div>
+              </div>
+
+
+
+</body>
+</html>
